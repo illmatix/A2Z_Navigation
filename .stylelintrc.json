@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "declaration-block-trailing-semicolon": "always",
+    "no-duplicate-selectors": true
+  }
+}

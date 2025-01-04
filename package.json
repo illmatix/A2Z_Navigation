@@ -1,0 +1,25 @@
+{
+  "name": "city-navigation",
+  "version": "1.0.0",
+  "description": "Interactive editorial piece about cities around the world with dynamic navigation.",
+  "main": "src/scripts/app.js",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:css": "sass src/styles/styles.scss dist/css/styles.css",
+    "build:js": "esbuild src/scripts/app.js --bundle --outfile=dist/js/app.js --minify",
+    "build:data": "mkdir -p dist/data && cp src/data/* dist/data",
+    "build:html": "cp public/index.html dist/index.html",
+    "build": "npm run clean && npm run build:css && npm run build:js && npm run build:data && npm run build:html"
+  },
+  "author": "Chad Payne",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "copyfiles": "^2.4.1",
+    "esbuild": "^0.24.2",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.83.0"
+  }
+}
