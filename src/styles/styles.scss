@@ -1,62 +1,73 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
 header {
-    margin: 0 2rem;
+  margin: 0 2rem;
 }
 
 #city-navigation {
   position: relative;
+  display: -webkit-flex; /* Safari */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 6rem 0 0;
   border-bottom: 2px solid #a8a8a8;
+}
 
-  .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
+#city-navigation .nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
 
-    .nav-item {
-      padding: 0 1rem;
+#city-navigation .nav-item {
+  padding: 0 1rem;
+}
 
-      a {
-        display: grid;
-        text-decoration: none;
-        color: #888888;
-        font-weight: 500;
-        padding: 5rem 0 0.75rem;
-        transition: background-color 0.3s ease;
+#city-navigation .nav-item a {
+  display: grid;
+  text-decoration: none;
+  color: #888888;
+  font-weight: 500;
+  padding: 5rem 0 0.75rem;
+  transition: background-color 0.3s ease;
+}
 
-        &:hover,
-        &:focus {
-          outline: none;
-        }
+#city-navigation .nav-item a:hover,
+#city-navigation .nav-item a:focus {
+  outline: none;
+}
 
-        &:hover {
-          color: #328098;
-        }
+#city-navigation .nav-item a:hover {
+  color: #328098;
+}
 
-        &:active, &.active {
-          color: #000000;
-        }
-      }
-    }
-  }
+#city-navigation .nav-item a:active,
+#city-navigation .nav-item a.active {
+  color: #000000;
+}
 
-  #sliding-border {
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    height: 2px;
-    background-color: #000000;
-    width: 0;
-    transition: width 0.3s ease, transform 0.3s ease;
-  }
+#city-navigation #sliding-border {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  background-color: #000000;
+  width: 0;
+  transition: width 0.3s ease, transform 0.3s ease;
 }
 
 main {
@@ -64,6 +75,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 /* Apple-inspired styles for the time display */
 .time-container {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -98,4 +110,8 @@ main {
 
 .hidden {
   display: none;
+}
+
+#sliding-border {
+  transition: -webkit-transform 0.3s ease, transform 0.3s ease;
 }
