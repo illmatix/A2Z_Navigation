@@ -25,10 +25,6 @@ Build the project:
 
 `npm run build`
 
-Start the development server:
-
-`npm run start`
-
 ## File Structure
 
 ```
