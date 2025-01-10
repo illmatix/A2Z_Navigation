@@ -10,7 +10,8 @@
     "build:js": "esbuild src/scripts/app.js --bundle --outfile=dist/js/app.js --minify",
     "build:data": "mkdir -p dist/data && cp src/data/* dist/data",
     "build:html": "cp public/index.html dist/index.html",
-    "build": "npm run clean && npm run build:css && npm run build:js && npm run build:data && npm run build:html"
+    "build": "npm run clean && npm run build:css && npm run build:js && npm run build:data && npm run build:html",
+    "start": "lite-server"
   },
   "author": "Chad Payne",
   "license": "MIT",
@@ -18,6 +19,7 @@
     "autoprefixer": "^10.4.20",
     "copyfiles": "^2.4.1",
     "esbuild": "^0.24.2",
+    "lite-server": "^2.6.1",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "sass": "^1.83.0"
